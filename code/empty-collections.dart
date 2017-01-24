@@ -1,2 +1,2 @@
-val emptyArray = &lt;String>[];
-val emptyMap = &lt;String, double>{};
+final emptyArray = &lt;String>[];
+final emptyMap = &lt;String, double>{};

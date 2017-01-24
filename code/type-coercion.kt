@@ -1,4 +1,3 @@
-final label = "The width is ";
-final width = 94;
-final widthLabel = label + width.toString();
-// or, use string interpolation
+val label = "The width is "
+val width = 94
+val widthLabel = label + width
