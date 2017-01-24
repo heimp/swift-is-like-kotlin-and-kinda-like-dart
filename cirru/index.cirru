@@ -14,7 +14,7 @@ html
       :href https://github.com/Nilhcem/swift-is-like-kotlin
       img#fork-me (:src http://nilhcem.github.io/swift-is-like-kotlin/fork-me.png)
     #note
-      = "Swift is like Kotlin"
+      = "Swift is like Kotlin and kind of like Dart"
 
     .section
       .title BASICS
