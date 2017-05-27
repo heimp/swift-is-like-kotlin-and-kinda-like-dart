@@ -38,10 +38,10 @@ body * {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
-    justify-content: center;
-    -webkit-justify-content: center;
+    justify-content: space-between;
+    /*-webkit-justify-content: center;
     -ms-box-pack: center;
-    -ms-box-align: center;
+    -ms-box-align: center;*/
 }
 
 .card {

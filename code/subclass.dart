@@ -12,7 +12,7 @@ class Square extends NamedShape {
     double sideLength;
     String name;
 
-    Square() : super(name) {
+    Square(this.sideLength) : super(name) {
         numberOfSides = 4;
     }
 

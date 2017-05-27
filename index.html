@@ -1,14 +1,19 @@
 <!DOCTYPE html><html><head><title>Swift is like Kotlin and kind of like Dart</title><meta charset="utf-8"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/highlightjs-github.css"><script src="js/highlight.9.4.0.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><a target="_blank" href="https://github.com/Nilhcem/swift-is-like-kotlin"><img id="fork-me" src="http://nilhcem.github.io/swift-is-like-kotlin/fork-me.png"></a><div id="note">Swift is like Kotlin and kind of like Dart</div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Hello World</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>print("Hello, world!")
 </code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>println("Hello, world!")
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>print('Hello, world!');</code></pre></div></div></div><div class="case"><div class="name">Variables And Constants</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var myVariable = 42
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>print('Hello, world!');</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>print("Hello, world");
+</code></pre></div></div></div><div class="case"><div class="name">Variables And Constants</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var myVariable = 42
 myVariable = 50
 let myConstant = 42</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var myVariable = 42
 myVariable = 50
 val myConstant = 42
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>var myVariable = 42;
 myVariable = 50;
-final myConstant = 42;</code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let explicitDouble: Double = 70</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
+final myConstant = 42;</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>variable value myVariable = 42;
+myVariable = 50;
+value myConstant = 42;
+</code></pre></div></div></div><div class="case"><div class="name">Explicit Types</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let explicitDouble: Double = 70</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val explicitDouble: Double = 70.0
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>double explicitDouble = 70.0;
+</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>Double explicitDouble = 70.0;
 </code></pre></div></div></div><div class="case"><div class="name">Type Coercion</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let label = "The width is "
 let width = 94
 let widthLabel = label + String(width)</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val label = "The width is "
@@ -16,7 +21,10 @@ val width = 94
 val widthLabel = label + width
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final label = "The width is ";
 final width = 94;
-final widthLabel = label + width.toString();</code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let apples = 3
+final widthLabel = label + width.toString();</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value label = "The width is ";
+value width = 94;
+value widthLabel = label + width.string;
+</code></pre></div></div></div><div class="case"><div class="name">String Interpolation</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let apples = 3
 let oranges = 5
 let fruitSummary = "I have \(apples + oranges) " +
                    "pieces of fruit."</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val apples = 3
@@ -26,7 +34,11 @@ val fruitSummary = "I have ${apples + oranges} " +
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final apples = 3;
 final oranges = 5;
 final fruitSummary = "I have ${apples + oranges} " +
-                   "pieces of fruit.";</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let names = ["Anna", "Alex", "Brian", "Jack"]
+                   "pieces of fruit.";</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value apples = 3;
+value oranges = 5;
+value fruitSummary = "I have ``apples + oranges`` " +
+                   "pieces of fruit.";
+</code></pre></div></div></div><div class="case"><div class="name">Range Operator</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let names = ["Anna", "Alex", "Brian", "Jack"]
 let count = names.count
 for i in 0..&lt;count {
     print("Person \(i + 1) is called \(names[i])")
@@ -44,7 +56,8 @@ for (i in 0..count - 1) {
 // Person 2 is called Alex
 // Person 3 is called Brian
 // Person 4 is called Jack
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div><div class="case"><div class="name">Inclusive Range Operator</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>for index in 1...5 {
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>// no equivalent
+</code></pre></div></div></div><div class="case"><div class="name">Inclusive Range Operator</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>for index in 1...5 {
     print("\(index) times 5 is \(index * 5)")
 }
 // 1 times 5 is 5
@@ -59,14 +72,27 @@ for (i in 0..count - 1) {
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var shoppingList = ["catfish", "water",
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>for (index in 1..5) {
+    println("``index`` times 5 is ``index * 5``");
+}
+// 1 times 5 is 5
+// 2 times 5 is 10
+// 3 times 5 is 15
+// 4 times 5 is 20
+// 5 times 5 is 25
+</code></pre></div></div></div></div><div class="section"><div class="title">BASICS</div><div class="case"><div class="name">Arrays</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var shoppingList = ["catfish", "water",
     "tulips", "blue paint"]
 shoppingList[1] = "bottle of water"</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val shoppingList = arrayOf("catfish", "water",
     "tulips", "blue paint")
 shoppingList[1] = "bottle of water"
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final shoppingList = ["catfish", "water",
     "tulips", "blue paint"];
-shoppingList[1] = "bottle of water";</code></pre></div></div></div><div class="case"><div class="name">Maps</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var occupations = [
+shoppingList[1] = "bottle of water";</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value shoppingList = Array {
+	"catfish", "water",
+	"tulips", "blue paint"
+};
+shoppingList[1] = "bottle of water";
+</code></pre></div></div></div><div class="case"><div class="name">Maps</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var occupations = [
     "Malcolm": "Captain",
     "Kaylee": "Mechanic",
 ]
@@ -79,12 +105,19 @@ occupations["Jayne"] = "Public Relations"
     "Malcolm": "Captain",
     "Kaylee": "Mechanic",
 };
-occupations["Jayne"] = "Public Relations";</code></pre></div></div></div><div class="case"><div class="name">Empty Collections</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let emptyArray = [String]()
+occupations["Jayne"] = "Public Relations";</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value occupations = HashMap {
+    "Malcolm" -> "Captain",
+    "Kaylee" -> "Mechanic"
+};
+occupations["Jayne"] = "Public Relations";
+</code></pre></div></div></div><div class="case"><div class="name">Empty Collections</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let emptyArray = [String]()
 let emptyDictionary = [String: Float]()
 </code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val emptyArray = arrayOf&lt;String>()
 val emptyMap = mapOf&lt;String, Float>()
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final emptyArray = &lt;String>[];
-final emptyMap = &lt;String, double>{};</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func greet(_ name: String,_ day: String) -> String {
+final emptyMap = &lt;String, double>{};</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value emptyArray = [];
+value emptyMap = map {};
+</code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func greet(_ name: String,_ day: String) -> String {
     return "Hello \(name), today is \(day)."
 }
 greet("Bob", "Tuesday")
@@ -95,12 +128,18 @@ greet("Bob", "Tuesday")
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>String greet(String name, String day) {
     return "Hello $name, today is $day.";
 }
-greet("Bob", "Tuesday");</code></pre></div></div></div><div class="case"><div class="name">Tuple Return</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func getGasPrices() -> (Double, Double, Double) {
+greet("Bob", "Tuesday");</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>String greet(String name, String day) =>
+    "Hello ``name``, today is ``day``.";
+greet("Bob", "Tuesday");
+</code></pre></div></div></div><div class="case"><div class="name">Tuple Return</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func getGasPrices() -> (Double, Double, Double) {
     return (3.59, 3.69, 3.79)
 }</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>data class GasPrices(val a: Double, val b: Double,
      val c: Double)
 fun getGasPrices() = GasPrices(3.59, 3.69, 3.79)
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div><div class="case"><div class="name">Variable Number Of Arguments</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func sumOf(_ numbers: Int...) -> Int {
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>Double[3] getGasPrices() {
+    return [3.59, 3.69, 3.79];
+}
+</code></pre></div></div></div><div class="case"><div class="name">Variable Number Of Arguments</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func sumOf(_ numbers: Int...) -> Int {
     var sum = 0
     for number in numbers {
         sum += number
@@ -119,7 +158,15 @@ sumOf(42, 597, 12)
 
 // sumOf() can also be written in a shorter way:
 fun sumOf(vararg numbers: Int) = numbers.sum()
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div><div class="case"><div class="name">Function Type</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func makeIncrementer() -> (Int -> Int) {
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>function sumOf(Integer* numbers) {
+    variable value sum = 0;
+    for number in numbers {
+        sum += number;
+    }
+    return sum;
+}
+sumOf(42, 597, 12);
+</code></pre></div></div></div><div class="case"><div class="name">Function Type</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func makeIncrementer() -> (Int -> Int) {
     func addOne(number: Int) -> Int {
         return 1 + number
     }
@@ -151,15 +198,32 @@ increment(7);
 
 // makeIncrementer can also be written in a shorter way:
 incrementer makeIncrementor() => (int number) => 1 + number;
+</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>alias Incrementer => Integer(Integer);
+
+Incrementer makeIncrementer() {
+	Integer addOne(Integer number) {
+		return 1 + number;
+	}
+	return addOne;
+}
+value increment = makeIncrementer();
+increment(7);
+
+
+// makeIncrementer can also be written in a shorter way:
+Incrementer makeIncrementor() => (Integer number) => 1 + number;
 </code></pre></div></div></div><div class="case"><div class="name">Map</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let numbers = [20, 19, 7, 12]
 numbers.map { 3 * $0 }
 </code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val numbers = listOf(20, 19, 7, 12)
 numbers.map { 3 * it }
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final numbers = [20, 19, 7, 12];
-numbers.map((number) => 3 * number);</code></pre></div></div></div><div class="case"><div class="name">Sort</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var mutableArray = [1, 5, 3, 12, 2]
+numbers.map((number) => 3 * number);</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value numbers = [20, 19, 7, 12];
+numbers.map((number) => 3 * number);
+</code></pre></div></div></div><div class="case"><div class="name">Sort</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var mutableArray = [1, 5, 3, 12, 2]
 mutableArray.sort()
 </code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>listOf(1, 5, 3, 12, 2).sorted()
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>[1, 5, 3, 12, 2].sort();</code></pre></div></div></div><div class="case"><div class="name">Named Arguments</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func area(width: Int, height: Int) -> Int {
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>[1, 5, 3, 12, 2].sort();</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>Array {1, 5, 3, 12, 2}.sortInPlace(increasing);
+</code></pre></div></div></div><div class="case"><div class="name">Named Arguments</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func area(width: Int, height: Int) -> Int {
     return width * height
 }
 area(width: 2, height: 3)
@@ -173,7 +237,13 @@ area(height = 3, width = 2)
 area(width = 2, height = 3);
 
 // This is also possible with named arguments
-area(height = 3, width = 2);</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>class Shape {
+area(height = 3, width = 2);</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>Integer area(Integer width, Integer height) => width * height;
+area {width = 2; height = 3;};
+
+// This is also possible with named arguments
+area {2; height = 3;};
+area {height = 3; width = 2;};
+</code></pre></div></div></div></div><div class="section"><div class="title">CLASSES</div><div class="case"><div class="name">Declaration</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>class Shape {
     var numberOfSides = 0
     func simpleDescription() -> String {
         return "A shape with \(numberOfSides) sides."
@@ -187,14 +257,22 @@ area(height = 3, width = 2);</code></pre></div></div></div></div><div class="sec
     var numberOfSides = 0;
     simpleDescription() =>
         "A shape with $numberOfSides sides.";
-}</code></pre></div></div></div><div class="case"><div class="name">Usage</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var shape = Shape()
+}</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>class Shape() {
+    shared variable Integer numberOfSides = 0;
+    shared String simpleDescription =>
+        "A shape with ``numberOfSides`` sides.";
+}
+</code></pre></div></div></div><div class="case"><div class="name">Usage</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var shape = Shape()
 shape.numberOfSides = 7
 var shapeDescription = shape.simpleDescription()</code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>var shape = Shape()
 shape.numberOfSides = 7
 var shapeDescription = shape.simpleDescription()
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>var shape = new Shape();
 shape.numberOfSides = 7;
-var shapeDescription = shape.simpleDescription();</code></pre></div></div></div><div class="case"><div class="name">Subclass</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>class NamedShape {
+var shapeDescription = shape.simpleDescription();</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value shape = Shape();
+shape.numberOfSides = 7;
+value shapeDescription = shape.simpleDescription;
+</code></pre></div></div></div><div class="case"><div class="name">Subclass</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>class NamedShape {
     var numberOfSides: Int = 0
     let name: String
 
@@ -265,7 +343,7 @@ class Square extends NamedShape {
     double sideLength;
     String name;
 
-    Square() : super(name) {
+    Square(this.sideLength) : super(name) {
         numberOfSides = 4;
     }
 
@@ -278,7 +356,30 @@ class Square extends NamedShape {
 
 final test = new Square(5.2, "square");
 test.area();
-test.simpleDescription();</code></pre></div></div></div><div class="case"><div class="name">Checking Type</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var movieCount = 0
+test.simpleDescription();
+</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>class NamedShape(name) {
+	shared String name;
+	shared default Integer numberOfSides = 0;
+
+	shared default String simpleDescription() =>
+			"A shape with ``numberOfSides`` sides.";
+}
+
+class Square(sideLength, String name) extends NamedShape(name) {
+	shared Float sideLength;
+	numberOfSides = 4;
+
+	shared Float area() => sideLength ^ 2.0;
+
+	shared actual String simpleDescription() =>
+			"A square with sides of length ``sideLength``.";
+
+}
+
+value test = Square(5.2, "square");
+test.area();
+test.simpleDescription();
+</code></pre></div></div></div><div class="case"><div class="name">Checking Type</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>var movieCount = 0
 var songCount = 0
 
 for item in library {
@@ -306,7 +407,17 @@ for (item in library) {
     } else if (item is Song) {
         ++songCount;
     }
-}</code></pre></div></div></div><div class="case"><div class="name">Pattern Matching</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let nb = 42
+}</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>variable value movieCount = 0;
+variable value songCount = 0;
+
+for (item in library) {
+    if (item is Movie) {
+        ++movieCount;
+    } else if (item is Song) {
+        ++songCount;
+    }
+}
+</code></pre></div></div></div><div class="case"><div class="name">Pattern Matching</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>let nb = 42
 switch nb {
     case 0...7, 8, 9: print("single digit")
     case 10: print("double digits")
@@ -322,7 +433,20 @@ when (nb) {
     in 100..999 -> println("triple digits")
     else -> println("four or more digits")
 }
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div><div class="case"><div class="name">Downcasting</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>for current in someObjects {
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>// there's no ranges in switch statements yet, unfortunately
+
+value nb = 42;
+switch (nb)
+case (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) {
+	print("single digit");
+}
+case (10) {
+	print("ten");
+}
+else {
+	print("two or more digits (except ten)");
+}
+</code></pre></div></div></div><div class="case"><div class="name">Downcasting</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>for current in someObjects {
     if let movie = current as? Movie {
         print("Movie: '\(movie.name)', " +
             "dir. \(movie.director)")
@@ -338,6 +462,12 @@ when (nb) {
     if (current is Movie) {
         print("Movie: '${current.name}', " +
 	    "dir. ${current.director}");
+    }
+}
+</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>for (current in someObjects) {
+    if (is Movie current) {
+        print("Movie: '``current.name``', " +
+	    "dir. ``current.director``");
     }
 }
 </code></pre></div></div></div><div class="case"><div class="name">Protocol</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>protocol Nameable {
@@ -360,6 +490,13 @@ fun f&lt;T: Nameable>(x: T) {
 
 f(Nameable x) {
     println("Name is " + x.name())
+}
+</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>interface Nameable {
+	shared formal String name();
+}
+
+void f(Nameable x) {
+	print("Name is " + x.name());
 }
 </code></pre></div></div></div><div class="case"><div class="name">Extensions</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>extension Double {
     var km: Double { return self * 1_000.0 }
@@ -386,4 +523,5 @@ println("One inch is $oneInch meters")
 val threeFeet = 3.0.ft
 println("Three feet is $threeFeet meters")
 // prints "Three feet is 0.914399970739201 meters"
-</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div></div></div></div></body></html>
+</code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>// no equivalent</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>// no equivalent
+</code></pre></div></div></div></div></body></html>
