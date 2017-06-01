@@ -133,8 +133,8 @@ let emptyDictionary = [String: Float]()
 </code></pre></div><div class="card"><div class="lang">Kotlin</div><pre class="code"><code>val emptyArray = arrayOf&lt;String>()
 val emptyMap = mapOf&lt;String, Float>()
 </code></pre></div><div class="card"><div class="lang">Dart</div><pre class="code"><code>final emptyArray = &lt;String>[];
-final emptyMap = &lt;String, double>{};</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>value emptyArray = [];
-value emptyMap = map {};
+final emptyMap = &lt;String, double>{};</code></pre></div><div class="card"><div class="lang">Ceylon</div><pre class="code"><code>String[] emptyArray = [];
+Map<String, Float> emptyMap = map {};
 </code></pre></div></div></div></div><div class="section"><div class="title">FUNCTIONS</div><div class="case"><div class="name">Functions</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>func greet(_ name: String,_ day: String) -> String {
     return "Hello \(name), today is \(day)."
 }
@@ -513,7 +513,7 @@ f(Nameable x) {
 	shared formal String name();
 }
 
-void f(Nameable x) {
+void f<T>(T x) given T satisfies Nameable {
 	print("Name is " + x.name());
 }
 </code></pre></div></div></div><div class="case"><div class="name">Extensions</div><div class="pair"><div class="card"><div class="lang">Swift</div><pre class="code"><code>extension Double {

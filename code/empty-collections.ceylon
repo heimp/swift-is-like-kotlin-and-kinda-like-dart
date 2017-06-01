@@ -1,2 +1,2 @@
-value emptyArray = [];
-value emptyMap = map {};
+String[] emptyArray = [];
+Map<String, Float> emptyMap = map {};

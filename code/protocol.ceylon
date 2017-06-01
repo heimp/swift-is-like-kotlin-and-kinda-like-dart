@@ -2,6 +2,6 @@ interface Nameable {
 	shared formal String name();
 }
 
-void f(Nameable x) {
+void f<T>(T x) given T satisfies Nameable {
 	print("Name is " + x.name());
 }
